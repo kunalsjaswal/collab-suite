@@ -1,13 +1,16 @@
-import { Routes } from "react-router-dom";
+// import { Routes } from "react-router-dom";
+
+import Navbar from "./components/Navbar/Navbar";
+
+
 
 function App() {
   return (
     <div className="App">
-       {/* <navbar></navbar> */}
-
-       <Routes>
-          {/* <Route index element = {}/> */}
-       </Routes>
+      <Navbar />
+      {/* <Routes> */}
+      {/* <Route index element = {}/> */}
+      {/* </Routes> */}
     </div>
   );
 }
