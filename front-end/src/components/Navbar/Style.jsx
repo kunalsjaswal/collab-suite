@@ -4,9 +4,7 @@ export const NavbarDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 4%;
-    border: 1px solid black;
-    
+    padding: 2% 4%;
     h2{
         color:#487FF8;
     }  
@@ -20,17 +18,22 @@ export const NavbarDiv = styled.div`
        margin:5%;
        background-color: #487FF8;
        color: white;
-       padding:10px 20px;
+       padding:15px 40px;
        border: none;
-       border-radius: 5px;
+       border-radius: 8px;
+       font-weight:700;
+       font-size:1rem;
+
     }
     button.signup{
        margin:5%;
        background-color: #487FF8;
        color: white;
-       padding:10px 20px;
+       padding:15px 40px;
        border: none;
        border-radius: 5px;
-
+       font-weight: 700;
+       font-size:1rem;
+       
     }
 `
