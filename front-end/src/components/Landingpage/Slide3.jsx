@@ -3,7 +3,7 @@ import { SlideThree } from './Style'
 
 const Slide3 = () => {
     return (
-        <SlideThree>
+        <SlideThree data-aos="fade-left"  data-aos-duration="500">
             <div className='heading'>
                 <h2>ABOUT US</h2>
             </div>
