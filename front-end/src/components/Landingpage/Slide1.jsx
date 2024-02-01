@@ -4,7 +4,7 @@ import slide1_img from '../../images/slide1-img.png'
 
 const Slide1 = () => {
     return (
-        <SlideOne>
+        <SlideOne data-aos="fade-left"  data-aos-duration="500">
             <div className='left-content'>
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolore?</h2>
                 <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error ratione voluptas laudantium quia, dolorem a ipsam incidunt perferendis libero?</p>

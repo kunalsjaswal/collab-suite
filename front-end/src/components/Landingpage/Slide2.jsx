@@ -4,7 +4,7 @@ import slide2_img from '../../images/slide2-img.png'
 
 const Slide2 = () => {
     return (
-        <SlideTwo>
+        <SlideTwo data-aos="fade-left"  data-aos-duration="500">
             <div className='left'>
                 <img src={slide2_img} alt="" />
             </div>
