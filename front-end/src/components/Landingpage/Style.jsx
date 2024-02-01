@@ -10,7 +10,7 @@ export const SlideOne = styled.div`
         margin: 10%;
         button{
             border: 2px solid #C1A875;
-            color: #444655;
+            color: #ffffff;
             background-color: #C1A875;
             padding: 1% 2%;
             border-radius: 5px;
@@ -52,12 +52,9 @@ display: flex;
 justify-items: center;
 align-items: center;
 margin: 0% 10%;
-img{
-    height: 500px;
-    width: 500px;
-}
 .left{
     width: 50%;
+    img{ width: 80%;}
 }
 .right{
     width: 50%;

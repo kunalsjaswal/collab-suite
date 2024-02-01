@@ -9,9 +9,7 @@ const Slide2 = () => {
                 <img src={slide2_img} alt="" />
             </div>
             <div className='right'>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dignissimos architecto nulla, earum cumque minus eaque magni sed. Blanditiis voluptatem nesciunt corporis, ut labore illo!</p>
-                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dignissimos architecto nulla, earum cumque minus eaque magni sed. Blanditiis voluptatem nesciunt corporis, ut labore illo!</p>
             </div>
         </SlideTwo>
     )

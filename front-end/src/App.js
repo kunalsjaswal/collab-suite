@@ -1,6 +1,6 @@
 // import { Routes } from "react-router-dom";
 
-import Slide2 from "./components/Landingpage/Slide2";
+import Carousel from "./components/Landingpage/Carousel";
 import Navbar from "./components/Navbar/Navbar";
 
 
@@ -9,9 +9,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Slide1 /> */}
-      <Slide2 />
-      {/* <Slide3 /> */}
+      <Carousel/>
+
       {/* <Routes> */}
       {/* <Route index element = {}/> */}
       {/* </Routes> */}
