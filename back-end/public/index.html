@@ -6,6 +6,15 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     let socket = io();
+    // socket.emit("chat", "Hello world from client");
+    // socket.on("hello", function (msg) {
+    //   console.log(msg);
+    // });
+    socket.on("broadcast", function (msg) {
+      console.log(msg);
+      document.body.innerHTML = "";
+      document.write(msg.description);
+    });
   </script>
   <body>
     Hello world
