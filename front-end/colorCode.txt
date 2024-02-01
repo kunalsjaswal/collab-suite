@@ -1,0 +1,8 @@
+primary  
+    1 - #487FF8  - dark
+    2 - #9db8f6  - normal
+    3 - #dee9ff  - light
+
+secondary
+    1 - #C1A875  - brownish
+    2 - #444655  - blackish
