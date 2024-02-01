@@ -46,3 +46,34 @@ export const SlideOne = styled.div`
         
     }
 `
+
+export const SlideTwo = styled.div`
+display: flex;
+justify-items: center;
+align-items: center;
+margin: 0% 10%;
+img{
+    height: 500px;
+    width: 500px;
+}
+.left{
+    width: 50%;
+}
+.right{
+    width: 50%;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+}
+`
+export const SlideThree = styled.div`
+display: flex;
+justify-items: center;
+align-items: center;
+flex-direction: column;
+margin: 3% 10%;
+.heading{
+    display: flex;
+    align-self: flex-start;
+}
+`
