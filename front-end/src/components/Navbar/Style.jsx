@@ -18,7 +18,7 @@ export const NavbarDiv = styled.div`
        margin:5%;
        background-color: #487FF8;
        color: white;
-       padding:15px 40px;
+       padding:15px 30px;
        border: none;
        border-radius: 8px;
        font-weight:700;
@@ -29,7 +29,7 @@ export const NavbarDiv = styled.div`
        margin:5%;
        background-color: #487FF8;
        color: white;
-       padding:15px 40px;
+       padding:15px 30px;
        border: none;
        border-radius: 5px;
        font-weight: 700;
