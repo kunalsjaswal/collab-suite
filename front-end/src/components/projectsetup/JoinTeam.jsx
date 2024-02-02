@@ -1,13 +1,27 @@
 import React from 'react'
 import { JoinTeamDiv } from './Style'
 
-const JoinTeam = ({ setCreate }) => {
+const JoinTeam = ({ selection, setSelection }) => {
+    function changeSelection(e) {
+        console.log(e.target.name)
+
+        if ((selection === 'create' && e.target.name === 'createBtn')) {
+            return setSelection('create')
+        }
+        else if ((selection === 'join' && e.target.name === 'joinBtn')) {
+            return setSelection('join')
+        }
+        else if (selection === 'create') {
+            return setSelection('join')
+        }
+        return setSelection('create')
+    }
     return (
         <JoinTeamDiv>
             <div className='container'>
                 <div className='heading'>
-                    <button onClick={() => setCreate((prev) => !prev)}>Create New</button>
-                    <button onClick={() => setCreate((prev) => !prev)}>Join Another</button>
+                    <button name='createBtn' onClick={changeSelection}>Create New</button>
+                    <button name='joinBtn' onClick={changeSelection}>Join Another</button>
                 </div>
                 <div className='formbox'>
                     <form action="">

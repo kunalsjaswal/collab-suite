@@ -4,11 +4,12 @@ import CreateTeam from "./CreateTeam"
 import { useState } from 'react'
 
 const SetupFile = () => {
-    const [create, setCreate] = useState(true)
-    if (create) {
-        return <CreateTeam create={create} setCreate={setCreate} />
+    const [selection, setSelection] = useState("create")
+    console.log(selection)
+    if (selection === "create") {
+        return <CreateTeam selection={selection} setSelection={setSelection} />
     }
-    return <JoinTeam create={create} setCreate={setCreate} />
+    return <JoinTeam selection={selection} setSelection={setSelection} />
 
 }
 
