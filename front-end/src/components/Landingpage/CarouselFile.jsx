@@ -26,7 +26,7 @@ const CarouselFile = () => {
 
             <div className="next-btns">
                 {
-                    index == 0?
+                    index === 0?
                     <RadioButtonCheckedIcon color='primary' className='radio-btn'/>:
                     <RadioButtonUncheckedIcon 
                         color='primary' 
@@ -35,7 +35,7 @@ const CarouselFile = () => {
                         />
                 }
                 {
-                    index == 1 ? 
+                    index === 1 ? 
                     <RadioButtonCheckedIcon color='primary' className='radio-btn'/>:
                     <RadioButtonUncheckedIcon 
                         color='primary' 
@@ -44,7 +44,7 @@ const CarouselFile = () => {
                         />
                 }
                 {
-                    index == 2 ? 
+                    index === 2 ? 
                     <RadioButtonCheckedIcon color='primary' className='radio-btn'/>:
                     <RadioButtonUncheckedIcon 
                         color='primary' 

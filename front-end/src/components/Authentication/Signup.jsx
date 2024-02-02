@@ -3,7 +3,7 @@ import { SignupDiv } from './Style'
 
 const Signup = () => {
     return (
-        <SignupDiv>
+        <SignupDiv data-aos="zoom-in"  data-aos-duration="500">
             <div className='main'>
                 <div className='heading'>
                     <h2>SIGN UP FOR CREATING <br />

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SlideOne = styled.div`
     display: grid;
     grid-template-columns: 50% 50%;
-
+    user-select: none;
     div.left-content{
         margin: 10%;
         button{
@@ -50,6 +50,7 @@ export const SlideTwo = styled.div`
     justify-items: center;
     align-items: center;
     margin: 0% 10%;
+    user-select: none;
 
     
     .left{

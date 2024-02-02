@@ -2,7 +2,7 @@ import React from 'react'
 import { LoginDiv } from './Style'
 const Login = () => {
     return (
-        <LoginDiv>
+        <LoginDiv data-aos="zoom-in"  data-aos-duration="500">
             <div className='main'>
                 <div className='heading'>
                     <h2>Welcome Back!</h2>

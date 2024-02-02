@@ -5,8 +5,11 @@ export const NavbarDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1% 2%;
-
-    div.icon-name{
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    .icon-name{
         display: flex;
         align-items: center;
         img.favicon-img{
@@ -36,7 +39,7 @@ export const NavbarDiv = styled.div`
         transition: 200ms;
     }
     button:hover{
-        color: black;
+        opacity: 0.9;
     }   
 
     @media (max-width: 900px) {

@@ -1,9 +1,6 @@
-// import { Routes } from "react-router-dom";
-
-// import Carousel from "./components/Landingpage/Carousel";
 import Navbar from "./components/Navbar/Navbar";
-import Login from "./components/Authentication/Login";
-import CarouselFile from "./components/Landingpage/CarouselFile";
+import RouterPage from "./components/Router/RouterPage";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -11,16 +8,9 @@ AOS.init();
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Login />
-      {/* <Signup /> */}
-      {/* <Carousel/> */}
-      <CarouselFile />
+        <Navbar />
+        <RouterPage/>
 
-
-      {/* <Routes> */}
-      {/* <Route index element = {}/> */}
-      {/* </Routes> */}
     </div>
   );
 }
