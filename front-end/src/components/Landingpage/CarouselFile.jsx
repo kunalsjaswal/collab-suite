@@ -7,17 +7,17 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 
 const CarouselFile = () => {
-    const items = [<Slide1/>, <Slide2/>, <Slide3/>]
+    const items = [<Slide1 />, <Slide2 />, <Slide3 />]
     const [index, setIndex] = useState(0)
 
-    useEffect(()=>{
+    useEffect(() => {
         setInterval(() => {
-            setIndex(prev => (prev+1) % 3)
+            setIndex(prev => (prev + 1) % 3)
         }, 5000);
         console.log("timeout")
-    },[])
+    }, [])
 
-    const onSliderClickHandler = (indx)=>{
+    const onSliderClickHandler = (indx) => {
         setIndex(indx);
     }
     return (
@@ -53,7 +53,7 @@ const CarouselFile = () => {
                         />
                 }
             </div>
-        
+
         </CarouselDiv>
 
 
