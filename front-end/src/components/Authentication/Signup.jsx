@@ -1,5 +1,9 @@
 import React from 'react'
 import { SignupDiv } from './Style'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
+import LockResetIcon from '@mui/icons-material/LockReset';
 
 const Signup = () => {
     return (
@@ -11,11 +15,23 @@ const Signup = () => {
                 </div>
                 <div className='formbox'>
                     <form>
-                        <input type="text" placeholder="Username" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Confirm Password" />
-                        <button>Sign Up</button>
+                        <div>
+                            <AccountCircleIcon fontSize='large' className = "field-icon"/>
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div>
+                            <EmailIcon fontSize='large' className = "field-icon"/>
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div>
+                            <LockIcon fontSize='large' className = "field-icon"/>
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <div>
+                            <LockResetIcon  fontSize='large' className = "field-icon"/>
+                            <input type="password" placeholder="Confirm Password" />
+                        </div>
+                        <button>Create Account</button>
                     </form>
                 </div>
             </div>

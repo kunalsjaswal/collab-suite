@@ -1,53 +1,55 @@
 import styled from "styled-components";
 
+export const SetupFileDiv = styled.div`
+    
+    border: 1px solid #C1A875;
+    width: 30%;
+    margin: auto;
+    margin-top: 2%;
+
+    .heading{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        button{
+            background-color: white;
+            border: 0;
+            color: #444655;
+            cursor: pointer;
+        }
+        .btn-1{
+            border-bottom-right-radius: 10px;
+        }
+        .btn-2{
+            border-bottom-left-radius: 10px;
+        }
+    }
+    .content{
+        /* border: 1px solid black; */
+        min-height: 200px;
+        padding: 10% 5%;
+    }
+
+`
 export const CreateTeamDiv = styled.div`
     display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    margin-top: 3%;
-    .container{
-        border: 1px solid black;
-        width: 50%
+    text-align:center;
+
+    input, .tx-area{
+        color: #C1A875;
+        padding: 2%;
+        border-radius: 2px;
+        margin: 2% 0%;
+        width: 70%;
+        resize: none;
+        border: 2px solid #C1A875;
     }
-    .heading{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        button{
-            width: 100%;
-            padding: 3%;
-            background-color: #487FF8;
-            border: none;
-            font-weight: 600;
-            font-size: 1.3rem;
-        }
-    }
-    .formbox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5%;
-    }
-    form{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 3% 0%;
-        width: 60%;
-        input{
-            padding: 2% 2%;
-            border-radius: 2px;
-            border: 1px solid black;
-            margin: 4% 0%;
-            width: 70%;
-        }
-        button{
+    button{
         width: 30%;
         color: white;
-        background-color: #487FF8;
+        background-color: #C1A875;
         border: none;
         border-radius: 5px;
         padding: 2% 0%; 
@@ -56,77 +58,48 @@ export const CreateTeamDiv = styled.div`
         transition: 200ms;
     }
     button:hover{
-        color: black;
+        opacity: 0.9;
     }  
-    select {
-        padding: 2% 2%;
+    .select-input {
+        padding: 2%;
         border-radius: 2px;
-        border: 1px solid black;
+        border: 2px solid #C1A875;
+        background-color: #C1A875;
+        color: white;
         margin: 4% 0%;
-        width: 70%;
-        
-}
+        width: 75%;
     }
+    
 `
 export const JoinTeamDiv = styled.div`
     display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    text-align: center;
     margin-top: 3%;
-    .container{
-        border: 1px solid black;
-        width: 50%
+ 
+    input{
+        font-weight: bold;
+        color: #C1A875;
+        padding: 2%;
+        border-radius: 2px;
+        border: 2px solid #C1A875;
+        width: 70%;
     }
-    .heading{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        button{
-            width: 100%;
-            padding: 3%;
-            background-color: #487FF8;
-            border: none;
-            font-weight: 600;
-            font-size: 1.3rem;
-        }
-    }
-    .formbox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5%;
-    }
-    form{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 3% 0%;
-        width: 60%;
-        input{
-            padding: 2% 2%;
-            border-radius: 2px;
-            border: 1px solid black;
-            margin: 5% 0%;
-            width: 70%;
-        }
-        button{
+    button{
         width: 30%;
         color: white;
-        background-color: #487FF8;
+        background-color: #C1A875;
         border: none;
         border-radius: 5px;
-        padding: 2% 0%; 
+        padding: 4%; 
         font-weight: 700;
         cursor: pointer;
         transition: 200ms;
-        margin-top: 2%;
+        margin-top: 4%;
     }
     button:hover{
-        color: black;
+        opacity: 0.9;
     }  
 
-    }
 `
