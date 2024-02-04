@@ -1,6 +1,5 @@
-import Navbar from "./components/navbar/Navbar";
-import RouterPage from "./components/Router/RouterPage";
-
+import Navbar from "./components/navbar/NavBar";
+import RouterPage from "./components/router/RouterPage";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
