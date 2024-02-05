@@ -2,20 +2,21 @@ import React from 'react'
 import { SlideOne } from './Style'
 import slide1_img from '../../images/slide1-img.png'
 import { NavLink } from 'react-router-dom'
-
+import Blob1 from "../../images/blobs/blob-1.png"
 
 const Slide1 = () => {
     return (
-        <SlideOne data-aos="fade-left"  data-aos-duration="500">
+        <SlideOne data-aos="fade-left" data-aos-duration="500">
             <div className='left-content'>
+                <img className='blob1' src={Blob1} alt="" />
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolore?</h2>
                 <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error ratione voluptas laudantium quia, dolorem a ipsam incidunt perferendis libero?</p>
-                <NavLink style={{textDecoration:"none", color:"white"}} to='login'>
+                <NavLink style={{ textDecoration: "none", color: "white" }} to='login'>
                     <button>JOIN US NOW</button>
-                </NavLink> 
+                </NavLink>
             </div>
             <div className='right-content'>
-                <img src={slide1_img} alt="" className='slide1-img'/>
+                <img src={slide1_img} alt="" className='slide1-img' />
             </div>
         </SlideOne>
     )

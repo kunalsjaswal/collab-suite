@@ -4,6 +4,8 @@ export const SlideOne = styled.div`
     display: grid;
     grid-template-columns: 50% 50%;
     user-select: none;
+    position: relative;
+
     div.left-content{
         margin: 10%;
         button{
@@ -16,6 +18,15 @@ export const SlideOne = styled.div`
             font-weight: bold;
             transition: 200ms;
 
+        }
+        .blob1{
+            
+            width: 30%;
+            position: absolute;
+            top: 0;
+            left:-10%;
+            z-index: -1;
+            transform: rotate(70deg);
         }
     }
 
@@ -51,13 +62,32 @@ export const SlideTwo = styled.div`
     align-items: center;
     margin: 0% 10%;
     user-select: none;
+    position: relative;
 
-    
     .left{
         width: 50%;
-        img{ width: 80%;}
+        .feature{ width: 80%;
+            }
+        
+        .blob2{
+            width: 50%;
+            position: absolute;
+            top: -10%;
+            left:-20%;
+            z-index: -1;
+            transform: rotate(90deg);
+    }
+    
     }
     .right{
+        .blob1{
+            width:30%;
+            position: absolute;
+            top: 0%;
+            right:-15%;
+            z-index: -1;
+            transform: rotate(170deg);
+        }
         width: 50%;
         display: flex;
         align-self: flex-end;
@@ -70,11 +100,21 @@ export const SlideThree = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 0% 5%;
-
-
+    position: relative;
+    min-height: 500px;
     .heading{
         display: flex;
         align-self: flex-start;
+    }
+    .content{
+        .blob1{
+            width:30%;
+            position: absolute;
+            top: -15%;
+            right:-10%;
+            z-index: -1;
+            transform: rotate(-110deg);
+        }
     }
 `
 

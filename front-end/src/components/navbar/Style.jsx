@@ -5,6 +5,7 @@ export const NavbarDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1% 2%;
+    background-color: transparent;
     a{
         text-decoration: none;
         color:white;
