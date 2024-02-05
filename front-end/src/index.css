@@ -4,3 +4,22 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #dee9ff;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #444655;
+    border-radius: 2px;
+}
