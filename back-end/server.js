@@ -1,28 +1,24 @@
-const app = require("express")();
-const http = require("http").createServer(app);
-const io = require("socket.io")(http);
-const path = require('path');
+import express from 'express';
+import userRouter from './routers/user.router.js';
+import connection from './db/connection.js';
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-// io.on('connection', (socket) => {
-//     console.log('a user connected')
-//     socket.on('chat', (msg) => { console.log(msg); });
-//     socket.emit("hello", "from server")
-//     socket.on('disconnect', () => { console.log('user disconnected'); });
-// });
-let clients = 0
-io.on('connection', (socket) => {
-    clients++;
-    io.sockets.emit("broadcast", { description: clients + ' clients connected!' });
-    socket.on('disconnect', () => {
-        clients--;
-        io.sockets.emit("broadcast", { description: clients + ' clients connected!' });
+const app = express();
+
+app.use(express.json())
+
+app.use("/", userRouter);
+
+async function start() {
+    const conn = await connection.then(() => {
+        console.log('Connected to database');
+        app.listen(3000, () => {
+            console.log('Server is running on port 3000');
+        });
+    }).catch((err) => {
+        console.log('Failed to connect to database');
     });
-});
 
+}
 
-
-http.listen(3000, () => { console.log('listening on port 3000'); });
+start();
 
