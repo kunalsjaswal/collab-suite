@@ -19,7 +19,7 @@ async function start() {
             console.log('Server is running on port 3000');
         });
     }).catch((err) => {
-        console.log('Failed to connect to database');
+        console.log('Failed to connect to database: ', err.message);
     });
 
 }

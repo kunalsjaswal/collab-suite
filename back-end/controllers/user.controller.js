@@ -14,10 +14,10 @@ export async function registerUser(req, res) {
         }
 
         let user = UserModel.create({ username, email, password: hashedPassword });
-        res.status(201).json({ message: "User created" });
+        res.status(201).json({ status:1, message: "User created" });
     }
     catch (err) {
-        res.status(500).json({ message: err.message });
+        res.status(500).json({ status:0, message: err.message });
     }
 
 }
@@ -34,10 +34,10 @@ export async function loginUser(req, res) {
         if (!isPasswordValid) {
             return res.status(400).json({ message: "Invalid password" });
         }
-        res.status(200).json({ message: "Login successful" });
+        res.status(200).json({status:1, message: "Login successful" });
     }
     catch (err) {
-        res.status(500).json({ message: err.message });
+        res.status(500).json({status:0, message: err.message });
     }
 }
 
