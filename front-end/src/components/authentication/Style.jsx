@@ -20,7 +20,7 @@ export const SignupDiv = styled.div`
     .formbox{
         padding: 3% 0%;
     }
-    form
+    .form
     {
         display: flex;
         flex-direction: column;

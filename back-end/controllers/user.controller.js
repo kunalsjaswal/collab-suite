@@ -34,7 +34,7 @@ export async function loginUser(req, res) {
         if (!isPasswordValid) {
             return res.status(400).json({ message: "Invalid password" });
         }
-        res.status(200).json({status:1, message: "Login successful" });
+        res.status(200).json({status:1, token:user ? user.username : email.username, message: "Login successful" });
     }
     catch (err) {
         res.status(500).json({status:0, message: err.message });
