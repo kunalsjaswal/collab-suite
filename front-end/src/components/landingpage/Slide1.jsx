@@ -9,8 +9,8 @@ const Slide1 = () => {
         <SlideOne data-aos="fade-left" data-aos-duration="500">
             <div className='left-content'>
                 <img className='blob1' src={Blob1} alt="" />
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolore?</h2>
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error ratione voluptas laudantium quia, dolorem a ipsam incidunt perferendis libero?</p>
+                <h1>WELCOME TO THE REMOTE TEAM COLLABORATION SUITE</h1>
+                <p>"Connect, collaborate, conquer. Experience the power of our Suite."</p>
                 <NavLink style={{ textDecoration: "none", color: "white" }} to='login'>
                     <button>JOIN US NOW</button>
                 </NavLink>

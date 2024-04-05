@@ -7,8 +7,20 @@ export const SlideOne = styled.div`
     position: relative;
 
     div.left-content{
+        text-align: center;
+
+        h1{
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-style: italic;
+        }
         margin: 10%;
         button{
+            font-size: 1.5rem;
             border: 2px solid #C1A875;
             color: #ffffff;
             background-color: #C1A875;
