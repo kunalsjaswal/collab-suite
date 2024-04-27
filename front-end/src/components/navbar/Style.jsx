@@ -23,13 +23,13 @@ export const NavbarDiv = styled.div`
     }
 
     div.btn-group{
-        width: 15%;
+        width: 25%;
         display: grid;
-        grid-template-columns: 45% 45%;
+        grid-template-columns: 33% 33% 33%;
         gap: 5%;
     }
     button{
-        width: 90%;
+        width: 100px;
         color: white;
         background-color: #487FF8;
         border: none;

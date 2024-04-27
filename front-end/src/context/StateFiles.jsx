@@ -1,33 +1,47 @@
 import { useState } from "react";
 import contextStore from "./ContextFile";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-const StateFile = (props) =>{
- 
+const StateFile = (props) => {
+
     const URI = "http://localhost:5000"
     const navigate = useNavigate()
 
     const [error, setError] = useState({
-        status : false,
-        message:""
+        status: false,
+        message: ""
     })
-    const loginUser = async({username, password})=>{
-        const response = await fetch(`${URI}/login`,{
-            method:"POST",
-            headers:{
+
+    const [currentUser, setCurrentUser] = useState({
+        username: localStorage.getItem("collab-username") || "",
+        email: localStorage.getItem("collab-email") || "",
+        token: localStorage.getItem("collab-token") || ""
+    })
+
+    const loginUser = async ({ username, password }) => {
+        const response = await fetch(`${URI}/login`, {
+            method: "POST",
+            headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({username, password})
+            body: JSON.stringify({ username, password })
         })
 
         const json = await response.json()
-        if(json.status){
+        if (json.status) {
             // logged in 
             localStorage.setItem("collab-token", json.token)
+            localStorage.setItem("collab-username", json.username)
+            localStorage.setItem("collab-email", json.email)
+            setCurrentUser({
+                username: json.username,
+                email: json.email,
+                token: json.token
+            })
             window.alert("logged in ")
             navigate("/dashboard")
         }
-        else{
+        else {
             // show error
             setError({
                 status: true,
@@ -36,22 +50,22 @@ const StateFile = (props) =>{
         }
     }
 
-    const signupUser = async (username, email, password)=>{
-        const response = await fetch(`${URI}/register`,{
-            method:"POST",
-            headers:{
+    const signupUser = async (username, email, password) => {
+        const response = await fetch(`${URI}/register`, {
+            method: "POST",
+            headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({username, email, password})
+            body: JSON.stringify({ username, email, password })
         })
 
         const json = await response.json()
-        if(json.status){
+        if (json.status) {
             // successfully registered <- direct to login 
             window.alert("Successfully Signed In")
             navigate('/login')
         }
-        else{
+        else {
             // show error
             setError({
                 status: true,
@@ -63,7 +77,7 @@ const StateFile = (props) =>{
     return (
         <contextStore.Provider
             value={{
-                loginUser, signupUser
+                loginUser, signupUser, currentUser, error
             }}
         >
             {props.children}
