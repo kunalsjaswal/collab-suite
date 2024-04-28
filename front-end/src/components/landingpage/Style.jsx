@@ -76,8 +76,10 @@ export const SlideTwo = styled.div`
     user-select: none;
     position: relative;
 
+
     .left{
         width: 50%;
+
         .feature{ width: 80%;
             }
         
@@ -88,6 +90,7 @@ export const SlideTwo = styled.div`
             left:-20%;
             z-index: -1;
             transform: rotate(90deg);
+
     }
     
     }
@@ -100,6 +103,20 @@ export const SlideTwo = styled.div`
             z-index: -1;
             transform: rotate(170deg);
         }
+        .joinus{
+            h2{
+                font-size: 3rem;
+                font-weight: 700;
+                text-align: center;
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 500;
+                text-align: center;
+            
+            }
+        }
+        height: 80vh;
         width: 50%;
         display: flex;
         align-self: flex-end;

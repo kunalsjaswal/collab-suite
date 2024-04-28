@@ -14,7 +14,6 @@ const CarouselFile = () => {
         setInterval(() => {
             setIndex(prev => (prev + 1) % 3)
         }, 5000);
-        console.log("timeout")
     }, [])
 
     const onSliderClickHandler = (indx) => {
@@ -26,30 +25,30 @@ const CarouselFile = () => {
 
             <div className="next-btns">
                 {
-                    index === 0?
-                    <RadioButtonCheckedIcon color='primary' className='radio-btn'/>:
-                    <RadioButtonUncheckedIcon 
-                        color='primary' 
-                        className='radio-btn'
-                        onClick = {()=>onSliderClickHandler(0)}
+                    index === 0 ?
+                        <RadioButtonCheckedIcon color='primary' className='radio-btn' /> :
+                        <RadioButtonUncheckedIcon
+                            color='primary'
+                            className='radio-btn'
+                            onClick={() => onSliderClickHandler(0)}
                         />
                 }
                 {
-                    index === 1 ? 
-                    <RadioButtonCheckedIcon color='primary' className='radio-btn'/>:
-                    <RadioButtonUncheckedIcon 
-                        color='primary' 
-                        className='radio-btn'
-                        onClick = {()=>onSliderClickHandler(1)}
+                    index === 1 ?
+                        <RadioButtonCheckedIcon color='primary' className='radio-btn' /> :
+                        <RadioButtonUncheckedIcon
+                            color='primary'
+                            className='radio-btn'
+                            onClick={() => onSliderClickHandler(1)}
                         />
                 }
                 {
-                    index === 2 ? 
-                    <RadioButtonCheckedIcon color='primary' className='radio-btn'/>:
-                    <RadioButtonUncheckedIcon 
-                        color='primary' 
-                        className='radio-btn'
-                        onClick = {()=>onSliderClickHandler(2)}
+                    index === 2 ?
+                        <RadioButtonCheckedIcon color='primary' className='radio-btn' /> :
+                        <RadioButtonUncheckedIcon
+                            color='primary'
+                            className='radio-btn'
+                            onClick={() => onSliderClickHandler(2)}
                         />
                 }
             </div>

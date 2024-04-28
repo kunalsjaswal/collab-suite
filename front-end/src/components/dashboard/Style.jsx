@@ -9,23 +9,29 @@ export const DashboardContainer = styled.div`
 export const OptionFileDiv = styled.div`
     width: 80%;
     margin: auto;
-    
+
     .profile-section{
         width: 90%;
         border-radius: 10px;
         background-color: #9db8f6;
         padding: 5%;
         color:#444655;
-
+        .email{
+            display: flex;
+            align-items:center;
+            padding:3%;
+            gap: 2%;
+            font-size: 1.2em;
+            justify-content: center;
+        }
         .head{
             width: 100%;
             display: flex;
-            align-items: center;
-            gap: 5%;
+            align-items: center; 
+            justify-content: space-evenly;
             .profile-logo{
                 border-radius: 50%;
                 padding: 2.5% 2%;
-                text-align: center;
                 background-color: white;
             }
         }
@@ -36,8 +42,10 @@ export const OptionFileDiv = styled.div`
         margin-top: 10%;
         background-color: #dee9ff;
         padding: 5%;
+
         h2{
-            padding-left: 8%;
+            text-align: center;
+
         }
         ul{
             list-style-type: circle;
@@ -53,6 +61,20 @@ export const OptionFileDiv = styled.div`
             }
         }
     }
+    .messages{
+        width: 90%;
+        border-radius: 10px;
+        background-color: #9db8f6;
+        padding: 5%;
+        color:#444655;
+        margin-top: 10%;
+
+        h2{
+        text-align: center;
+
+        }
+    }
+
 
 `
 

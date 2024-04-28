@@ -13,7 +13,10 @@ const Slide2 = () => {
             </div>
             <div className='right'>
                 <img className='blob1' src={Blob1} alt="" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dignissimos architecto nulla, earum cumque minus eaque magni sed. Blanditiis voluptatem nesciunt corporis, ut labore illo!</p>
+                <p className='joinus'>
+                    <h2>Join Us</h2>
+                    <p>Join the thousands of teams worldwide who rely on Remote Team Collaboration Suite to collaborate effectively, no matter where they are. Experience the future of remote work with us today.</p>
+                </p>
             </div>
         </SlideTwo>
     )
