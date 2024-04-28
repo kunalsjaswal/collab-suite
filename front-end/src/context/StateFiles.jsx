@@ -74,10 +74,68 @@ const StateFile = (props) => {
         }
     }
 
+    const createGroup = async (groupdata) => {
+        const response = await fetch(`${URI}/group/create`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(groupdata)
+        })
+        const json = await response.json()
+        if (json.status) {
+            window.alert("Group Created")
+            navigate("/dashboard")
+        }
+        else {
+            setError({
+                status: true,
+                message: json.message
+            })
+        }
+    }
+
+    const joinGroup = async (groupcode) => {
+        const response = await fetch(`${URI}/group/join`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ code: groupcode, username: currentUser.username })
+        })
+        const json = await response.json()
+        if (json.status) {
+            console.log(json.group)
+            window.alert("Group Joined")
+            navigate("/dashboard")
+        }
+        else {
+            setError({
+                status: true,
+                message: json.message
+            })
+        }
+    }
+
+    // const getGroups = async () => {
+    //     const response = await fetch(`${URI}/groups`, {
+    //         method: "POST",
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ token: currentUser.token })
+    //     })
+    //     const json = await response.json()
+    //     if (json.status) {
+    //         return json.groups
+    //     }
+    //     return [{ error: "No Groups Found" }]
+    // }
+
     return (
         <contextStore.Provider
             value={{
-                loginUser, signupUser, currentUser, error
+                loginUser, signupUser, currentUser, error, createGroup, joinGroup
             }}
         >
             {props.children}

@@ -34,13 +34,8 @@ const Navbar = () => {
                 </NavLink>}
 
                 {currentUser.token && <NavLink to="/dashboard">
-                    <button className="signup">Dashboard</button>
+                    <button className="dashboard">Dashboard</button>
                 </NavLink>}
-
-                {currentUser.token && <NavLink to="/projectsetup">
-                    <button className="signup">Teams</button>
-                </NavLink>}
-
 
                 {currentUser.token && <NavLink to="/">
                     <button className="signup" onClick={handleLogout}>Logout</button>

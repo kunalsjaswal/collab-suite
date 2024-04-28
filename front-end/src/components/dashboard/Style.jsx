@@ -65,6 +65,19 @@ export const ProjectListDiv = styled.div`
     background-color: #dee9ff;
     overflow: auto;
     height: 500px;
+    .columns{
+            width: 90%;
+            display: grid;
+            grid-template-columns: 60% 20% 20%;
+            align-items: center;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.5em;
+            box-shadow: 0px 0px 5px 0px #000000;
+            border-radius: 10px;
+            padding: 0% 2%;
+
+    }
     .top{
         display: grid;
         grid-template-columns: 70% 30%;
@@ -110,7 +123,7 @@ export const ItemDiv = styled.div`
     .item{
         display: flex;
         flex-direction: column;
-            
+        margin:0 auto;
         .itemtop{
             display: grid;
             grid-template-columns: 5% 55% 20% 20%;
@@ -153,8 +166,8 @@ export const ShowMoreDiv = styled.div`
         }
     }
     .desc{
-        display: flex;
-        width: 100%;    
+        display: grid;
+        grid-template-columns: 70% 30%;
         gap: 2%;
         h3{
             align-self: flex-start;

@@ -1,12 +1,20 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { SignupDiv } from './Style'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import LockResetIcon from '@mui/icons-material/LockReset';
 import contextStore from '../../context/ContextFile';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (localStorage.getItem("collab-token")) {
+            navigate("/dashboard")
+        }
+    }, [navigate])
+
     const { signupUser } = useContext(contextStore)
     const [credentials, setCredentials] = useState({
         username: "",
